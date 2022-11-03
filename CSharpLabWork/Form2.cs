@@ -17,18 +17,21 @@ namespace CSharpLabWork
         {
             InitializeComponent(); 
             Random rnd = new Random();
-            label1.Text = $"Pupil: {p1}    Group: {p2}";
+            label1.Text = $"Студент: {p1}    Группа: {p2}";
             int n = Convert.ToInt32(p3);
             tableLayoutPanel1.RowCount = n;
+            tableLayoutPanel1.ColumnCount = 3;
             for (int i = 0; i < n; i++)
             {
-                tableLayoutPanel1.Controls.Add(new TextBox() { Text = $"Some simple task #{i}", Dock = DockStyle.Fill, ReadOnly = true }, 0, i + 1);
                 if (p4)
                 {
-                    tableLayoutPanel1.Controls.Add(new CheckBox() { Text = $"Some simple answer #{i}", Dock = DockStyle.Fill }, 1, i + 1);
+                    tableLayoutPanel1.Controls.Add(new TextBox() { Text = $"Легкое задание {i+1}", Dock = DockStyle.Fill, ReadOnly = true }, 0, i + 1);
+                    tableLayoutPanel1.Controls.Add(new CheckBox() { Text = $"Ответ :{rnd.Next(12)}", Dock = DockStyle.Fill}, 1, i + 1);
+                    tableLayoutPanel1.Controls.Add(new CheckBox() { Text = $"Ответ :{rnd.Next(12)}", Dock = DockStyle.Fill}, 2, i + 1);
                 }
                 else
                 {
+                    tableLayoutPanel1.Controls.Add(new TextBox() { Text = $"Сложное задание #{i}", Dock = DockStyle.Fill, ReadOnly = true }, 0, i + 1);
                     ComboBox cb = new ComboBox();
                     cb.Dock = DockStyle.Fill;
                     for (int j = 0; j < 6; j++)

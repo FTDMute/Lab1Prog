@@ -13,32 +13,32 @@ namespace CSharpLabWork
             bool condition = true;
             if (textBox1.Text.Length == 0)
             {
-                MessageBox.Show("First name was not entered");
+                MessageBox.Show("Имя не введено");
                 condition = false;
             }
             if (textBox2.Text.Length == 0)
             {
-                MessageBox.Show("last name was not entered");
+                MessageBox.Show("Фамилия не введена");
                 condition = false;
             }
             if (textBox3.Text.Length == 0)
             {
-                MessageBox.Show("Middle name was not entered");
+                MessageBox.Show("Отчество не введено");
                 condition = false;
             }
             if (comboBox1.Text.Length == 0)
             {
-                MessageBox.Show("Group was not chosen");
+                MessageBox.Show("Группа не выбрана");
                 condition = false;
             }
             if (numericUpDown1.Value==0)
             {
-                MessageBox.Show("Tasks count was not chosen");
+                MessageBox.Show("Количество не введено");
                 condition = false;
             }
             if (!radioButton1.Checked && !radioButton2.Checked)
             {
-                MessageBox.Show("Complexity was not chosen");
+                MessageBox.Show("Сложность не выбрана");
                 condition = false;
             }
             if (condition)
